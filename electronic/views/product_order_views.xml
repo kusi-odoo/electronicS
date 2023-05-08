@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_order_action" model="ir.actions.act_window">
+        <field name="name">Product Order</field>
+        <field name="res_model">product.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+                  <!-- Form View -->
+                     
+    <record id="product_order_form" model="ir.ui.view">
+        <field name="name">product_order</field>
+        <field name="model">product.order</field>
+        <field name="arch" type="xml">
+            <form string="Order">
+                <sheet>
+                  <group>
+                  <group>
+                   <field name="order_product" string="Order Product"/> 
+                   <field name="order_date" string ="Order Date"/>
+                   <field name="customer_id"/>
+                   <field name="cart_id"/>
+                  </group>
+                  </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+     
+                     <!-- Tree View -->
+
+     <record id="order_view" model="ir.ui.view">
+        <field name="name">Order tree</field>
+        <field name="model">product.order</field>
+        <field name="arch" type="xml">
+            <tree string="Order">
+                <field name="order_product" /> 
+                <field name="order_date" />
+                <field name="cart_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
