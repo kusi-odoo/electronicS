@@ -10,6 +10,7 @@
     # data files always loaded at installation
     'data': [
         'security/ir.model.access.csv',
+        'views/product_cart_line_views.xml',
         'views/product_cart_views.xml',
         'views/product_views.xml',
         'views/product_order_views.xml',

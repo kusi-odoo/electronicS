@@ -4,15 +4,11 @@
         <menuitem id="elctronic_shop_product_menu" name="Product">
             <menuitem id="product_property_menu_action" action="product_action" />
         </menuitem> 
-                      <!-- Order Line  menu  -->
-                      
-        <menuitem id="product_order_line_menu" name="Order Line" >
-         <menuitem id="product_order_line_menu_action" action="product_order_line_action"/>
-        </menuitem> 
-                      <!-- Order menu -->
+                      <!-- Order Menu -->
 
         <menuitem id="product_order_menu" name="Orders" >
          <menuitem id="product_order_menu_action" action="product_order_action"/>
+          <menuitem id="product_order_line_menu_action" action="product_order_line_action"/>
         </menuitem> 
                        <!-- Customer menu -->
 
@@ -23,6 +19,7 @@
 
          <menuitem id="product_cart_menu" name="Cart" >
          <menuitem id="product_cart_menu_action" action="product_cart_action"/>
+         <menuitem id="product_cart_line_menu_action" action="product_cart_line_action"/>
         </menuitem> 
     </menuitem>
 </odoo>

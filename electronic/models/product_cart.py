@@ -12,7 +12,7 @@ class ProductCart(models.Model):
     cust_id=fields.Many2one('product.customer',string="Customer",required=True)
     total_amount=fields.Float(string='Tolat Amount',compute='_compute_total_amount')
 
-    cart_items=fields.One2many()
+    cart_items=fields.One2many('product.cart.line','cart_id',string='Cart Item')
 
 
 

@@ -4,3 +4,4 @@ electronic.access_product_order_line,access_product_order_line,electronic.model_
 electronic.access_product_order,access_product_order,electronic.model_product_order,base.group_user,1,1,1,1
 electronic.access_product_customer,access_product_customer,electronic.model_product_customer,base.group_user,1,1,1,1
 electronic.access_product_cart,access_product_cart,electronic.model_product_cart,base.group_user,1,1,1,1
+electronic.access_product_cart_line,access_product_cart_line,electronic.model_product_cart_line,base.group_user,1,1,1,1

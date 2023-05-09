@@ -15,8 +15,16 @@
             <form string="Type">
                 <sheet>
                    <group>
-                   <field name="cust_id"/>   
+                   <field name="cust_id"/>  
+                   <field name="total_amount"/> 
                    </group>
+                   <notebook>
+                       <page string="Cart Items">
+                            <group>
+                               <field name="cart_items"/>
+                            </group>
+                        </page>  
+                   </notebook>
                 </sheet>
             </form>
         </field>
@@ -30,6 +38,7 @@
         <field name="arch" type="xml">
             <tree string="Cart">
                 <field name="cust_id"/>
+                <field name="total_amount"/>
             </tree>
         </field>
     </record>

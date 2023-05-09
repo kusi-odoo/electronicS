@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="product_order_action" model="ir.actions.act_window">
-        <field name="name">Product Order</field>
+        <field name="name">Order</field>
         <field name="res_model">product.order</field>
         <field name="view_mode">tree,form</field>
     </record>
@@ -16,12 +16,20 @@
                 <sheet>
                   <group>
                   <group>
-                   <field name="order_product" string="Order Product"/> 
-                   <field name="order_date" string ="Order Date"/>
+                   <field name="order_date"/>
                    <field name="customer_id"/>
                    <field name="cart_id"/>
+                   <field name="total_amount"/>
                   </group>
                   </group>
+
+                   <notebook>
+                        <page string="Order lines">
+                            <group>
+                               <field name="order_lines"/>
+                            </group>
+                        </page>  
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -34,7 +42,7 @@
         <field name="model">product.order</field>
         <field name="arch" type="xml">
             <tree string="Order">
-                <field name="order_product" /> 
+                <field name="customer_id"/>
                 <field name="order_date" />
                 <field name="cart_id"/>
             </tree>
