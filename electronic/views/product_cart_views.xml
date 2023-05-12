@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
- <record id="product_cart_action" model="ir.actions.act_window">
+    <record id="product_cart_action" model="ir.actions.act_window">
         <field name="name">Cart</field>
         <field name="res_model">product.cart</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-                     <!-- Form View -->
-                
+                        <!-- Tree View -->
+
+    <record id="cart_view" model="ir.ui.view">
+        <field name="name">Cart tree</field>
+        <field name="model">product.cart</field>
+        <field name="arch" type="xml">
+            <tree string="Cart">
+                <field name="cust_id" />
+                <field name="total_amount" />
+            </tree>
+        </field>
+    </record>
+
+                           <!-- Form View -->
+
     <record id="product_cart_form" model="ir.ui.view">
         <field name="name">product_cart</field>
         <field name="model">product.cart</field>
         <field name="arch" type="xml">
             <form string="Type">
                 <sheet>
-                   <group>
-                   <field name="cust_id"/>  
-                   <field name="total_amount"/> 
-                   </group>
-                   <notebook>
-                       <page string="Cart Items">
-                            <group>
-                               <field name="cart_items"/>
-                            </group>
-                        </page>  
-                   </notebook>
+                    <group>
+                        <field name="cust_id" />
+                        <field name="total_amount" />
+                    </group>
+                    <notebook>
+                        <page string="Cart Items">
+                            <field name="cart_items" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
-        </field>
-    </record>
-          
-                       <!-- Tree View -->
-
-     <record id="cart_view" model="ir.ui.view">
-        <field name="name">Cart tree</field>
-        <field name="model">product.cart</field>
-        <field name="arch" type="xml">
-            <tree string="Cart">
-                <field name="cust_id"/>
-                <field name="total_amount"/>
-            </tree>
         </field>
     </record>
 

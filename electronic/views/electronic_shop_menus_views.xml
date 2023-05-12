@@ -19,7 +19,7 @@
 
          <menuitem id="product_cart_menu" name="Cart" >
          <menuitem id="product_cart_menu_action" action="product_cart_action"/>
-         <menuitem id="product_cart_line_menu_action" action="product_cart_line_action"/>
+         <!-- <menuitem id="product_cart_line_menu_action" action="product_cart_line_action"/> -->
         </menuitem> 
     </menuitem>
 </odoo>

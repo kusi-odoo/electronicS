@@ -17,7 +17,7 @@ class Product(models.Model):
     price=fields.Float(string="Price",required=True)
     company_name=fields.Char()
     product_details=fields.Char()
-    product_mfg=fields.Datetime()
+    product_mfg=fields.Date('Product MFG')
 
     carts=fields.Many2many('product.cart',string='Carts')
    

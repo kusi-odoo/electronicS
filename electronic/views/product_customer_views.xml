@@ -6,7 +6,22 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-                 <!-- Form View -->
+                 <!-- Tree View -->
+
+    <record id="customer_view" model="ir.ui.view">
+        <field name="name">Customer tree</field>
+        <field name="model">product.customer</field>
+        <field name="arch" type="xml">
+            <tree string="Customer">
+                <field name="name" />
+                <field name="email" />
+                <field name="phone" />
+                <field name="address" />
+            </tree>
+        </field>
+    </record>
+
+                  <!-- Form View -->
 
     <record id="product_customer_form" model="ir.ui.view">
         <field name="name">product_customer</field>
@@ -15,31 +30,15 @@
             <form string="Customer">
                 <sheet>
                     <h1>
-                        <field name="name"/>
+                        <field name="name" />
                     </h1>
                     <group>
-                        <field name="email" string="E-mail"/>
-                        <field name="phone" string="Phone No"/>
-                       <field name="address" string="Addrss"/>
+                        <field name="email" string="E-mail" />
+                        <field name="phone" string="Phone No" />
+                        <field name="address" string="Addrss" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-
-                    <!-- Tree View -->
-
-     <record id="customer_view" model="ir.ui.view">
-        <field name="name">Customer tree</field>
-        <field name="model">product.customer</field>
-        <field name="arch" type="xml">
-            <tree string="Customer">
-                <field name="name"/>
-                 <field name="email"/>
-                  <field name="phone"/>
-                  <field name="address" />
-            </tree>
-        </field>
-    </record>
-
 </odoo>

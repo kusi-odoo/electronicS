@@ -6,46 +6,43 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-                  <!-- Form View -->
-                     
+                    <!-- Tree View -->
+
+    <record id="order_view" model="ir.ui.view">
+        <field name="name">Order tree</field>
+        <field name="model">product.order</field>
+        <field name="arch" type="xml">
+            <tree string="Order">
+                <field name="customer_id" />
+                <field name="order_date" />
+                <field name="cart_id" />
+            </tree>
+        </field>
+    </record>
+
+                   <!-- Form View -->
+
     <record id="product_order_form" model="ir.ui.view">
         <field name="name">product_order</field>
         <field name="model">product.order</field>
         <field name="arch" type="xml">
             <form string="Order">
                 <sheet>
-                  <group>
-                  <group>
-                   <field name="order_date"/>
-                   <field name="customer_id"/>
-                   <field name="cart_id"/>
-                   <field name="total_amount"/>
-                  </group>
-                  </group>
-
-                   <notebook>
+                    <group>
+                        <group>
+                            <field name="order_date" />
+                            <field name="customer_id" />
+                            <field name="cart_id" />
+                            <field name="total_amount" />
+                        </group>
+                    </group>
+                    <notebook>
                         <page string="Order lines">
-                            <group>
-                               <field name="order_lines"/>
-                            </group>
-                        </page>  
+                            <field name="order_lines" />
+                        </page>
                     </notebook>
                 </sheet>
             </form>
-        </field>
-    </record>
-     
-                     <!-- Tree View -->
-
-     <record id="order_view" model="ir.ui.view">
-        <field name="name">Order tree</field>
-        <field name="model">product.order</field>
-        <field name="arch" type="xml">
-            <tree string="Order">
-                <field name="customer_id"/>
-                <field name="order_date" />
-                <field name="cart_id"/>
-            </tree>
         </field>
     </record>
 </odoo>

@@ -5,6 +5,7 @@ class ProductCartLine(models.Model):
 
     _name = "product.cart.line"
     _description = "Electronic Product Cart Line"
+    _rec_name="cart_id"
 
     product_id=fields.Many2one('product',string='Product',required=True)
     cart_id=fields.Many2one('product.cart',string='Cart',required=True)
